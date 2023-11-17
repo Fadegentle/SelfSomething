@@ -1,0 +1,3 @@
+[submodule "configures/clash-rules"]
+	path = configures/clash-rules
+	url = git@github.com:Loyalsoldier/clash-rules.git
