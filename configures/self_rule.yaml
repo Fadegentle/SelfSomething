@@ -6,8 +6,30 @@ mode: Rule
 log-level: silent
 external-controller: '0.0.0.0:9090'
 secret: ''
-proxies: ''
-proxy-groups: ''
+proxies:
+  -
+    name: '代理节点名字1'
+    type: ss
+    server: your.server1.xxx
+    port: 1234
+    cipher: xxxxx
+    password: xxxxxxxxx
+    udp: true
+  -
+    name: '代理节点名字2'
+    type: ss
+    server: your.server2.xxx
+    port: 1234
+    cipher: xxxxx
+    password: xxxxxxxxx
+    udp: true
+proxy-groups:
+  -
+    name: 🔰国外流量
+    type: select
+    proxies:
+      - '代理节点名字1'
+      - '代理节点名字2'
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
