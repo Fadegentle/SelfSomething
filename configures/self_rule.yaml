@@ -4,19 +4,17 @@ redir-port: 7892
 allow-lan: false
 mode: Rule
 log-level: silent
-external-controller: '0.0.0.0:9090'
-secret: ''
+external-controller: "0.0.0.0:9090"
+secret: ""
 proxies:
-  -
-    name: '代理节点名字1'
+  - name: "代理节点名字1"
     type: ss
     server: your.server1.xxx
     port: 1234
     cipher: xxxxx
     password: xxxxxxxxx
     udp: true
-  -
-    name: '代理节点名字2'
+  - name: "代理节点名字2"
     type: ss
     server: your.server2.xxx
     port: 1234
@@ -24,12 +22,40 @@ proxies:
     password: xxxxxxxxx
     udp: true
 proxy-groups:
-  -
-    name: 🔰国外流量
+  - name: 🔰国外流量
     type: select
     proxies:
-      - '代理节点名字1'
-      - '代理节点名字2'
+      - "代理节点名字1"
+      - "代理节点名字2"
+  - name: 🎮 Steam
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀直接连接
+      - 🚫禁止连接
+  - name: 🌐 MicroSoft
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+  - name: 🎞️ Nvidia
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+  - name: 🍎苹果服务
+    type: select
+    proxies:
+      - 🚀直接连接
+      - 🔰国外流量
+  - name: 🚀直接连接
+    type: select
+    proxies:
+      - DIRECT
+  - name: 🚫禁止连接
+    type: select
+    proxies:
+      - REJECT
 rules:
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
@@ -72,7 +98,6 @@ rules:
   - IP-CIDR,54.235.23.242/32,🔰国外流量,no-resolve
   - IP-CIDR,169.45.248.118/32,🔰国外流量,no-resolve
   - DOMAIN-SUFFIX,pscp.tv,🔰国外流量
-  - DOMAIN-SUFFIX,nvidia.com,🔰国外流量
   - DOMAIN-SUFFIX,periscope.tv,🔰国外流量
   - DOMAIN-SUFFIX,t.co,🔰国外流量
   - DOMAIN-SUFFIX,twimg.co,🔰国外流量
@@ -340,7 +365,6 @@ rules:
   - DOMAIN-SUFFIX,soundcloud.com,🔰国外流量
   - DOMAIN-SUFFIX,ssrcloud.org,🔰国外流量
   - DOMAIN-SUFFIX,startpage.com,🔰国外流量
-  - DOMAIN-SUFFIX,steamcommunity.com,🔰国外流量
   - DOMAIN-SUFFIX,steemit.com,🔰国外流量
   - DOMAIN-SUFFIX,steemitwallet.com,🔰国外流量
   - DOMAIN-SUFFIX,t66y.com,🔰国外流量
@@ -576,8 +600,25 @@ rules:
   - DOMAIN-SUFFIX,wolframalpha.com,🔰国外流量
   - DOMAIN-SUFFIX,x-art.com,🔰国外流量
   - DOMAIN-SUFFIX,yimg.com,🔰国外流量
-  - DOMAIN,api.steampowered.com,🔰国外流量
-  - DOMAIN,store.steampowered.com,🔰国外流量
+
+  - DOMAIN-SUFFIX,steamcommunity.com,🎮 Steam
+  - DOMAIN-SUFFIX,steampowered.com,🎮 Steam
+  - DOMAIN-SUFFIX,steam-chat.com,🎮 Steam
+  - DOMAIN-SUFFIX,steamgames.com,🎮 Steam
+  - DOMAIN-SUFFIX,steamusercontent.com,🎮 Steam
+  - DOMAIN-SUFFIX,steamcontent.com,🎮 Steam
+  - DOMAIN-SUFFIX,steamstatic.com,🎮 Steam
+  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,🎮 Steam
+  - DOMAIN-SUFFIX,steamstat.us,🎮 Steam
+  - DOMAIN,api.steampowered.com,🎮 Steam
+  - DOMAIN,store.steampowered.com,🎮 Steam
+
+  - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
+  - DOMAIN-SUFFIX,microsoft.com,🌐 Microsoft
+  - DOMAIN-SUFFIX,s-microsoft.com,🌐 Microsoft
+  - DOMAIN,officecdn-microsoft-com.akamaized.net,🌐 Microsoft
+
+  - DOMAIN-SUFFIX,nvidia.com,🎞️ Nvidia
 
   - DOMAIN-SUFFIX,aaplimg.com,🍎苹果服务
   - DOMAIN-SUFFIX,apple.co,🍎苹果服务
@@ -802,7 +843,6 @@ rules:
   - IP-CIDR6,fc00::/7,DIRECT,no-resolve
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
   - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN,app.adjust.com,DIRECT
   - DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
   - DOMAIN,dl.google.com,DIRECT
@@ -891,9 +931,6 @@ rules:
   - DOMAIN-SUFFIX,miui.com,DIRECT
   - DOMAIN-SUFFIX,miwifi.com,DIRECT
   - DOMAIN-SUFFIX,xiaomi.com,DIRECT
-  # - DOMAIN-SUFFIX,microsoft.com,DIRECT
-  # - DOMAIN-SUFFIX,s-microsoft.com,DIRECT
-  # - DOMAIN,officecdn-microsoft-com.akamaized.net,DIRECT
   - DOMAIN-SUFFIX,msecnd.net,DIRECT
   - DOMAIN-SUFFIX,office365.com,DIRECT
   - DOMAIN-SUFFIX,outlook.com,DIRECT
@@ -917,14 +954,6 @@ rules:
   - DOMAIN-SUFFIX,sogo.com,DIRECT
   - DOMAIN-SUFFIX,sogou.com,DIRECT
   - DOMAIN-SUFFIX,sogoucdn.com,DIRECT
-  - DOMAIN-SUFFIX,steampowered.com,DIRECT
-  - DOMAIN-SUFFIX,steam-chat.com,DIRECT
-  - DOMAIN-SUFFIX,steamgames.com,DIRECT
-  - DOMAIN-SUFFIX,steamusercontent.com,DIRECT
-  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
-  - DOMAIN-SUFFIX,steamstatic.com,DIRECT
-  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
-  - DOMAIN-SUFFIX,steamstat.us,DIRECT
   - DOMAIN-SUFFIX,gtimg.com,DIRECT
   - DOMAIN-SUFFIX,idqqimg.com,DIRECT
   - DOMAIN-SUFFIX,igamecj.com,DIRECT
@@ -1106,7 +1135,6 @@ rules:
   - DOMAIN-SUFFIX,mubu.com,DIRECT
   - DOMAIN-SUFFIX,myzaker.com,DIRECT
   - DOMAIN-SUFFIX,nim-lang-cn.org,DIRECT
-  # - DOMAIN-SUFFIX,nvidia.com,DIRECT
   - DOMAIN-SUFFIX,oracle.com,DIRECT
   - DOMAIN-SUFFIX,paypal.com,DIRECT
   - DOMAIN-SUFFIX,paypalobjects.com,DIRECT
