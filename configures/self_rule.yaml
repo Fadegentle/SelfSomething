@@ -33,7 +33,7 @@ proxy-groups:
       - 🔰国外流量
       - 🚀直接连接
       - 🚫禁止连接
-  - name: 🌐 MicroSoft
+  - name: 🌐 Microsoft
     type: select
     proxies:
       - 🚀直接连接
