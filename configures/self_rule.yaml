@@ -614,12 +614,8 @@ rules:
   - DOMAIN,steampowered.com.8686c.com,DIRECT
   - DOMAIN,steamstatic.com.8686c.com,DIRECT
   - DOMAIN,steambroadcast.akamaized.net,DIRECT
-  - DOMAIN,steamcommunity-a.akamaihd.net,DIRECT
-  - DOMAIN,steamstore-a.akamaihd.net,DIRECT
-  - DOMAIN,steamusercontent-a.akamaihd.net,DIRECT
-  - DOMAIN,steamuserimages-a.akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,steamcontent.com,DIRECT
-  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
+  - DOMAIN-SUFFIX,akamaihd.net,DIRECT
   - DOMAIN-SUFFIX,steamchina.com,DIRECT
 
   - DOMAIN-SUFFIX,steamcommunity.com,🎮 Steam
