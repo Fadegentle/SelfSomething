@@ -54,6 +54,7 @@ proxy-groups:
       - DIRECT
   - name: 🚫禁止连接
     type: select
+    udp: false
     proxies:
       - REJECT
 rules:
@@ -601,17 +602,38 @@ rules:
   - DOMAIN-SUFFIX,x-art.com,🔰国外流量
   - DOMAIN-SUFFIX,yimg.com,🔰国外流量
 
+  - DOMAIN,csgo.wmsj.cn,DIRECT
+  - DOMAIN,dota2.wmsj.cn,DIRECT
+  - DOMAIN,wmsjsteam.com,DIRECT
+  - DOMAIN,dl.steam.clngaa.com,DIRECT
+  - DOMAIN,dl.steam.ksyna.com,DIRECT
+  - DOMAIN,st.dl.bscstorage.net,DIRECT
+  - DOMAIN,st.dl.eccdnx.com,DIRECT
+  - DOMAIN,st.dl.pinyuncloud.com,DIRECT
+  - DOMAIN,steampipe.steamcontent.tnkjmec.com,DIRECT
+  - DOMAIN,steampowered.com.8686c.com,DIRECT
+  - DOMAIN,steamstatic.com.8686c.com,DIRECT
+  - DOMAIN,steambroadcast.akamaized.net,DIRECT
+  - DOMAIN,steamcommunity-a.akamaihd.net,DIRECT
+  - DOMAIN,steamstore-a.akamaihd.net,DIRECT
+  - DOMAIN,steamusercontent-a.akamaihd.net,DIRECT
+  - DOMAIN,steamuserimages-a.akamaihd.net,DIRECT
+  - DOMAIN-SUFFIX,steamcontent.com,DIRECT
+  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,DIRECT
+  - DOMAIN-SUFFIX,steamchina.com,DIRECT
+
   - DOMAIN-SUFFIX,steamcommunity.com,🎮 Steam
   - DOMAIN-SUFFIX,steampowered.com,🎮 Steam
   - DOMAIN-SUFFIX,steam-chat.com,🎮 Steam
   - DOMAIN-SUFFIX,steamgames.com,🎮 Steam
   - DOMAIN-SUFFIX,steamusercontent.com,🎮 Steam
-  - DOMAIN-SUFFIX,steamcontent.com,🎮 Steam
   - DOMAIN-SUFFIX,steamstatic.com,🎮 Steam
-  - DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,🎮 Steam
   - DOMAIN-SUFFIX,steamstat.us,🎮 Steam
   - DOMAIN,api.steampowered.com,🎮 Steam
   - DOMAIN,store.steampowered.com,🎮 Steam
+  - PROCESS-NAME,steam,🎮 Steam
+  - PROCESS-NAME,steamwebhelper,🎮 Steam
+  - PROCESS-NAME,steamservice,🎮 Steam
 
   - DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
   - DOMAIN-SUFFIX,microsoft.com,🌐 Microsoft
