@@ -30,8 +30,8 @@ proxy-groups:
   - name: 🎮 Steam
     type: select
     proxies:
-      - 🔰国外流量
       - 🚀直接连接
+      - 🔰国外流量
       - 🚫禁止连接
   - name: 🌐 Microsoft
     type: select
