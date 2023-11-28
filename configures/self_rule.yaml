@@ -43,12 +43,32 @@ proxy-groups:
     proxies:
       - 🚀直接连接
       - 🔰国外流量
-  - name: 🍎苹果服务
+  - name: ⚓️其他流量
+    type: select
+    proxies:
+      - 🔰国外流量
+      - 🚀直接连接
+  - name: ✈️Telegram
+    type: select
+    proxies:
+      - 🔰国外流量
+  - name: 🎬Youtube
+    type: select
+    proxies:
+      - 🔰国外流量
+  - name: 🎬Netflix
+    type: select
+    proxies:
+      - 🔰国外流量
+  - name: 🎬哔哩哔哩
     type: select
     proxies:
       - 🚀直接连接
+  - name: 🎬国外媒体
+    type: select
+    proxies:
       - 🔰国外流量
-  - name: ⚓️其他流量
+  - name: 🍎苹果服务
     type: select
     proxies:
       - 🚀直接连接
