@@ -12,7 +12,8 @@
 
 ## 基础使用
 
-1. 获得机场节点的 `yaml` 后，点击左侧栏 `Profiles`，选择 `Import` 导入文件
+1. 点击左侧栏 `General`，打开 `System Proxy` 启动系统代理
+2. 获得机场节点的 `yaml` 后，点击左侧栏 `Profiles`，选择 `Import` 导入文件
 
 ![cfw_profiles](../assets/tutorial/proxy/cfw_profiles.png)
 
