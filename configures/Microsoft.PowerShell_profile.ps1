@@ -12,5 +12,5 @@ function lg { eza --icons --long --header --all --git }  # 显示详情的同时
 function tree { eza --tree --icons }  # 替换 tree 命令
 
 # alias zoxide
-New-Alias -Name z -Value zoxide
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+New-Alias -Name z -Value C:\Users\Fadegentle\AppData\Local\Microsoft\WinGet\Packages\ajeetdsouza.zoxide_Microsoft.Winget.Source_8wekyb3d8bbwe\zoxide.exe
+z init powershell | Out-String | Invoke-Expression
