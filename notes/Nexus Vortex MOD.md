@@ -12,7 +12,7 @@
 
 ![](../assets/notes/Vortex/8994ea926651868f8f00ecc28d424a29_MD5.png)
 
-3. Vortex 需要 .NET 6，在 Win+r 打开运行输入 `dotnet --list-runtimes` 查看是否存在，不满足则点击下载
+3. Vortex 需要 .NET 6，在 Win+r 打开运行输入 `powershell` ，在弹出的终端输入 `dotnet --list-runtimes` 查看是否存在，不满足则点击下载
 
 ![](../assets/notes/Vortex/c88454e403860154de93b5e394c099c6_MD5.png)
 
