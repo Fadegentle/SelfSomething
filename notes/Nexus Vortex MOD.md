@@ -8,7 +8,7 @@
 ## 步骤
 
 1. 注册 Nexus 账户 [https://www.nexusmods.com/](https://www.nexusmods.com/)
-2. 下载安装 Vortex
+2. 下载安装 Vortex，若无法成功登录 Vortex 则考虑关闭加速器、修改 hosts 文件
 
 ![](../assets/notes/Vortex/8994ea926651868f8f00ecc28d424a29_MD5.png)
 
