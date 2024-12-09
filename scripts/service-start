@@ -1,0 +1,3 @@
+#!/bin/sh
+/koolshare/bin/ks-services-start.sh
+cru a ip_monitor_polling "*/5 * * * * /jffs/scripts/ip_monitor.sh"
