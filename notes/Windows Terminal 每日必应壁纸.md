@@ -2,6 +2,8 @@
 > ps: 由于新版 Windows Terminal 更新了安全规则，不允许使用请求返回图片，只能用静态资源，所以需要脚本捕捉静态资源，本教程下载到本地，若多个设备需要用可以考虑下载到服务器上用统一的 URL
 
 - 将 [update-bing-wallpaper.ps1](../scripts/update-bing-wallpaper.ps1) 里的个人相关路径修改
+- 设置 `wt` 外观
+  ![alt text](<../assets/notes/Windows Terminal 每日必应壁纸/image.png>)
 - 推荐手动加入 “任务计划程序”，界面上点点点就行
 - 命令行模式加入
 
