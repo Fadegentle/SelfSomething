@@ -1,3 +1,5 @@
+# 更新 Bing 今日壁纸
+
 # ===== 配置 =====
 $ImagePath = "C:\Users\Fadegentle\Documents\PowerShell\bing-today.jpg"
 $MetaPath  = "C:\Users\Fadegentle\Documents\PowerShell\bing-today.txt"
