@@ -394,7 +394,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
       MYSQL_DATABASE: ${MYSQL_DATABASE:-gdjy}
       TZ: Asia/Shanghai
-      LANG: zh_CN.UTF-8
+      LANG: C.UTF-8
     volumes:
       - /data/gdjy/mysql:/var/lib/mysql
       - ./backend/db/my.cnf:/etc/mysql/conf.d/my.cnf:ro
